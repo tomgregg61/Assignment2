@@ -1,0 +1,34 @@
+{
+    "id": "index.html",
+    "start_url": "/",
+    "description": "A CV website for Web Development Assignment 2",
+    "name": "CV Website",
+    "short_name": "CV Website",
+    "icons": [
+        {
+            "src": "icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ff0000",
+    "background_color": "#ff0000",
+    "display": "standalone"
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qualifications</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="theme-color" content="#0e353e" />
+    <meta
+      name="description"
+      content="A CV website for Web Development Assignment 2"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#847e87" />
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="msapplication-config" content="icons/browserconfig.xml" />
+    <meta name="theme-color" content="#ff0000" />
+  </head>
+  <body>
+    <div>
+      <header id="mainHeader">
+        <h1>Qualifications</h1>
+      </header>
+    </div>
+    <nav class="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a aria-current="page" href="qualifications.html">Qualifications</a>
+        </li>
+        <li><a href="demos.html">Demos</a></li>
+        <li><a href="interests.html">Interests</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div id="starImage">
+        <picture>
+          <!-- For laptops or bigger this image is used (its bigger) -->
+          <source
+            type="image/webp"
+            media="(min-width: 768px)"
+            srcset="images/quals/bigStar.webp"
+          />
+          <!-- Fall back image for browsers that don't support a webp image -->
+          <source type="image/jpeg" srcset="images/quals/bigStar.jpg" />
+          <img
+            src="images/quals/bigStar.webp"
+            alt="Banner pciture of stars"
+            id="mStar"
+          />
+        </picture>
+      </div>
+      <div>
+        <p>
+          My name is Thomas Gregg. I was given this page and have corrected all
+          the issues with the HTML and the image on this page as part of my
+          assessment.
+        </p>
+        <p>
+          This table contains qualifications I have studied, and ones I am
+          currently studying
+        </p>
+        <table>
+          <tr>
+            <th>Level</th>
+            <th>Subject</th>
+            <th>Completion date</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>GCE</td>
+            <td>Computer Science</td>
+            <td>July 2023</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>GCE</td>
+            <td>Mathematics</td>
+            <td>July 2023</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>GCE</td>
+            <td>Business</td>
+            <td>July 2023</td>
+            <td>B</td>
+          </tr>
+        </table>
+        <p>
+          I will have covered all of these subjects by the end of my first year
+          at
+          <strong>University</strong>
+        </p>
+        <ul>
+          <li>Programming languages</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>C#</li>
+        </ul>
+        <ol>
+          <li>Networking</li>
+          <li>Cybersecurity</li>
+          <li>Digital technologies</li>
+          <li>Web pages</li>
+          <li>Operating systems</li>
+        </ol>
+      </div>
+    </main>
+    <footer id="footer">
+      <div id="contentOfFooter">
+        Name: Thomas Gregg <br />
+        StudentID: 23017369 <br />
+        <b
+          >This is not a real website and is a submission for Assignment 2 of
+          Staffordshire University's Year 1 Web Development Module</b
+        >
+        <br />
+        <a class="w3" href="https://validator.w3.org/">validator.w3</a>
+      </div>
+    </footer>
+    <script>
+      //check whether browser support service workers
+      if ("serviceWorker" in navigator) {
+        //wait until page loaded to avoid delaying rendering
+        window.addEventListener("load", function () {
+          //register service worker
+          navigator.serviceWorker.register("serviceworker.js").then(
+            function (registration) {
+              console.log(
+                "Service worker registration successful",
+                registration
+              );
+            },
+            function (err) {
+              console.log("Service worker registration failed", err);
+            }
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

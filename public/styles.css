@@ -1,0 +1,630 @@
+/* Include your style in here for all pages. 
+Extra style for cssdemo.html can be added in cssdemo.css */
+
+:root {
+  --primary-background-colour: #ffffff;
+  --primary-text-colour: #000000;
+  --headfoot-background-colour: #0e353e;
+  --headfoot-text-colour: #ffffff;
+  --border-colour: #ffffff;
+  --hyperlink-colour: #ffffff;
+  --nav-background-colour: #1e505b;
+  --list-border-colour: #0e353e;
+  --nav-hover-background: #ffffff;
+  --box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  --button-background: var(--nav-background-colour);
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: var(--primary-background-colour);
+  color: var(--primary-text-colour);
+}
+
+/* CSS for anchor on Demo page */
+html {
+  scroll-behavior: smooth;
+}
+
+#anchoredLinks ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#anchoredLinks a {
+  text-decoration: underline;
+  color: black;
+  font-size: 16px;
+  margin-right: 1rem;
+}
+
+/* Main paragraph styling */
+main p {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Star Image CSS */
+
+#starImage {
+  margin-bottom: 2rem;
+  width: 100%;
+  height: auto;
+}
+
+#starImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Header CSS */
+header {
+  background-color: var(--headfoot-background-colour);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--headfoot-text-colour);
+}
+
+/* Footer CSS */
+footer {
+  max-height: calc(1rem + 500px);
+  width: 100%;
+  padding-bottom: 6rem;
+  background-color: var(--headfoot-background-colour);
+  color: var(--headfoot-text-colour);
+}
+
+#contentOfFooter {
+  padding-top: 4rem;
+  padding-left: 2rem;
+}
+
+.w3 {
+  color: var(--hyperlink-colour);
+}
+
+/* Heading 1 CSS */
+h1 {
+  font-size: 1.8rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Navigation CSS */
+nav {
+  width: 100%;
+}
+
+.mainNav {
+  left: 0;
+  top: 0;
+  font-size: 15px;
+  position: sticky;
+}
+.mainNav ul {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--nav-background-colour);
+  display: flex;
+}
+
+.mainNav li {
+  width: 100%;
+  border: 1px var(--list-border-colour) solid;
+}
+
+.mainNav a {
+  min-height: 2.5rem;
+  text-decoration: none;
+  color: var(--hyperlink-colour);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+.mainNav a[aria-current] {
+  color: var(--nav-background-colour);
+  background-color: var(--hyperlink-colour);
+}
+
+.mainNav a:hover {
+  color: var(--nav-hover-text);
+  background-color: var(--nav-hover-background);
+}
+
+/* Table CSS */
+th,
+td {
+  border: 1px solid;
+  text-align: center;
+}
+/* Card CSS */
+.card {
+  width: 15rem;
+  align-items: center;
+  vertical-align: bottom;
+  margin-bottom: 3rem;
+  background-color: #1b7683;
+  color: #ffffff;
+  display: inline-grid;
+}
+
+#books,
+#movies,
+#tvshows {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.card h2 {
+  font-size: 16px;
+}
+
+.card h3 {
+  font-size: 12.8px;
+}
+
+.card p {
+  font-size: 24px;
+  color: #ffff00;
+  margin-top: -0.2rem;
+}
+
+.card img {
+  width: 18.75rem;
+  height: 25rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(2, 100, 149, 0.336);
+}
+
+/* About CSS */
+#about {
+  display: flex;
+  padding-top: 2rem;
+  text-align: left;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#about h2 {
+  margin-left: 2rem;
+}
+
+#about img {
+  margin-top: 1rem;
+  max-width: 12rem;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  border: 1rem solid #1e505b;
+}
+
+/* Skills CSS */
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#skills h2 {
+  margin-left: 2rem;
+}
+
+#skills img {
+  padding-top: 2rem;
+  max-width: 12rem;
+  height: auto;
+  border: 1rem solid #1e505b;
+}
+
+/* Hobbies CSS */
+#hobbies {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#hobbies h2 {
+  margin-left: 2rem;
+}
+
+#hobbies img {
+  margin-left: 2rem;
+  max-width: 12rem;
+  height: auto;
+  border: 1rem solid #1e505b;
+  margin-bottom: 2rem;
+}
+
+/* Home text CSS */
+p,
+li {
+  max-width: 30rem;
+}
+
+/* Demos page CSS */
+#cssDemo {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+#cssDemo img {
+  margin-top: 1rem;
+  min-width: 10rem;
+  height: auto;
+}
+#cssDemo a {
+  color: blue;
+}
+#jsDemo {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+#jsDemo img {
+  margin-top: 1rem;
+  min-width: 10rem;
+  height: auto;
+}
+#jsDemo a {
+  color: blue;
+}
+/* CSS to align h2 in Demo page */
+#demoH2 {
+  text-align: center;
+}
+/* Demos List CSS */
+#demos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Below media query for 4k */
+@media screen and (min-width: 150rem) {
+  /* Anchored Links CSS */
+  #anchoredLinks a {
+    font-size: 30px;
+  }
+  /* Nav CSS */
+  .mainNav li {
+    min-width: 24.9%;
+  }
+  .mainNav a {
+    font-size: 25px;
+  }
+  /* About CSS */
+  #about {
+    font-size: 25px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #about img {
+    margin-left: 40rem;
+    min-width: 30rem;
+  }
+
+  /* Skills CSS */
+  #skills {
+    margin-top: 8rem;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-left: 10rem;
+  }
+
+  #skills li,
+  #skills h2 {
+    font-size: 25px;
+    margin-left: 30rem;
+  }
+
+  #skills img {
+    min-width: 25rem;
+    margin-right: 20rem;
+  }
+
+  /* Hobbies CSS */
+  #hobbies {
+    padding-top: 4rem;
+    flex-direction: row;
+    margin-bottom: 8rem;
+  }
+  #hobbies li {
+    margin-right: 25rem;
+    font-size: 25px;
+  }
+
+  #hobbies img {
+    min-width: 25rem;
+    margin-left: 30rem;
+  }
+
+  /* Card CSS */
+  .card {
+    margin: 5rem;
+  }
+  #books h2 {
+    font-size: 40px;
+  }
+  #movies h2 {
+    font-size: 40px;
+  }
+  #tvshows h2 {
+    font-size: 40px;
+  }
+
+  /* Demos List CSS */
+  #demoH2 {
+    font-size: 50px;
+  }
+  #demos {
+    flex-direction: row;
+    font-size: 40px;
+  }
+  #demos li {
+    margin-right: 20rem;
+    margin-left: 20rem;
+  }
+  #cssDemo img {
+    min-width: 20rem;
+  }
+  #jsDemo img {
+    min-width: 20rem;
+  }
+}
+/* Below media query for laptop L */
+@media screen and (min-width: 83rem) and (max-width: 150rem) {
+  /* Navigation CSS */
+  .mainNav a {
+    font-size: 20px;
+  }
+  /* Anchored Links CSS */
+  #anchoredLinks a {
+    font-size: 20px;
+  }
+
+  /* Card CSS */
+  .card {
+    margin: 3rem;
+  }
+  #books h2 {
+    font-size: 30px;
+  }
+  #movies h2 {
+    font-size: 30px;
+  }
+  #tvshows h2 {
+    font-size: 30px;
+  }
+  /* About CSS */
+  #about {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #about p {
+    margin-right: 12rem;
+  }
+
+  #about img {
+    min-width: 20rem;
+  }
+
+  /* Skills CSS */
+  #skills {
+    margin-top: 8rem;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-left: 10rem;
+  }
+
+  #skills :not(img) {
+    margin-right: 2rem;
+  }
+
+  #skills img {
+    min-width: 20.875rem;
+    height: auto;
+    margin-right: 20rem;
+  }
+
+  /* Hobbies CSS */
+  #hobbies {
+    padding-top: 4rem;
+    flex-direction: row;
+    margin-bottom: 8rem;
+  }
+
+  #hobbies img {
+    margin-left: 16rem;
+    min-width: 20rem;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  /* Footer CSS */
+  #contentOfFooter {
+    padding-top: 4rem;
+    padding-left: 6rem;
+  }
+
+  /* Demos List CSS */
+  #demoH2 {
+    font-size: 40px;
+  }
+  #demos {
+    flex-direction: row;
+    font-size: 20px;
+  }
+  #demos li {
+    margin-right: 15rem;
+    margin-left: 15rem;
+  }
+  #cssDemo img {
+    min-width: 15rem;
+  }
+  #jsDemo img {
+    min-width: 15rem;
+  }
+}
+/* Below media query for Laptop */
+@media screen and (min-width: 64rem) and (max-width: 83rem) {
+  /* Anchored Links CSS */
+  #anchoredLinks a {
+    font-size: 20px;
+  }
+  /* About CSS */
+  #about {
+    padding-top: 2rem;
+    flex-direction: row;
+  }
+
+  #about p {
+    margin-right: 10rem;
+  }
+
+  #about img {
+    min-width: 20rem;
+    margin-left: -2rem;
+  }
+
+  /* Skills CSS */
+  #skills {
+    margin-top: 8rem;
+    flex-direction: row-reverse;
+    margin-left: 2rem;
+  }
+
+  #skills :not(img) {
+    margin-right: 2rem;
+  }
+
+  #skills img {
+    width: 20.875rem;
+    margin-right: 15rem;
+  }
+
+  /* Hobbies CSS */
+  #hobbies {
+    padding-top: 2rem;
+    text-align: left;
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+
+  #hobbies li {
+    margin-right: 8rem;
+  }
+
+  #hobbies img {
+    margin-left: -2rem;
+    margin-top: -2rem;
+  }
+
+  /* Footer CSS */
+  #contentOfFooter {
+    padding-top: 4rem;
+    padding-left: 6rem;
+  }
+
+  /* Card CSS */
+  .card {
+    margin: 3rem;
+  }
+  #books h2 {
+    font-size: 25px;
+  }
+  #movies h2 {
+    font-size: 25px;
+  }
+  #tvshows h2 {
+    font-size: 25px;
+  }
+
+  /* Demos List CSS */
+  #demoH2 {
+    font-size: 40px;
+  }
+  #demos {
+    flex-direction: row;
+    font-size: 20px;
+  }
+  #demos li {
+    margin-right: 5rem;
+    margin-left: 5rem;
+  }
+  #cssDemo img {
+    min-width: 15rem;
+  }
+  #jsDemo img {
+    min-width: 15rem;
+  }
+}
+/* Below media query for Tablet*/
+@media screen and (max-width: 64rem) {
+  /* Navigation CSS */
+  .mainNav a {
+    font-size: 18px;
+  }
+  /* Anchored Links CSS */
+  #anchoredLinks a {
+    font-size: 20px;
+  }
+  /* Card CSS */
+  #books h2 {
+    font-size: 25px;
+  }
+  #movies h2 {
+    font-size: 25px;
+  }
+  #tvshows h2 {
+    font-size: 25px;
+  }
+
+  /* About CSS */
+  #about img {
+    max-width: 15rem;
+  }
+
+  /* Skills CSS */
+  #skills img {
+    max-width: 15rem;
+  }
+
+  /* Hobbies CSS */
+  #hobbies img {
+    max-width: 15rem;
+  }
+
+  /* Card CSS */
+  .card {
+    margin: 3rem;
+  }
+}

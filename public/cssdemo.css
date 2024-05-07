@@ -1,0 +1,232 @@
+/* This is the extra style for the CSS demo page only
+This should be linked to alongside the main styles.css page */
+:root {
+  --primary-background-colour: #ffffff;
+  --primary-text-colour: #000000;
+  --headfoot-background-colour: #ffffff;
+  --headfoot-text-colour: #000000;
+  --border-colour: #ffffff;
+  --hyperlink-colour: #ffffff;
+  --nav-background-colour: #006801;
+  --list-border-colour: #ffffff;
+  --nav-current-text: #000000;
+  --nav-current-background: var(--nav-text-colour);
+  --nav-hover-text: #000000;
+  --nav-hover-background: #ffffff;
+  --box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  --button-background: var(--nav-background-colour);
+  font-family: monospace, "Courier New", Courier;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+header {
+  background-color: var(--headfoot-background-colour);
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  color: var(--headfoot-text-colour);
+}
+
+p,
+li {
+  max-width: none;
+}
+
+/* h1 styling */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+h1 {
+  margin-top: -1rem;
+  margin-left: 4rem;
+  font-size: 40px;
+  margin-bottom: 10rem;
+  animation: slideInFromLeft 1s ease-in-out;
+  text-align: left;
+  font-family: monospace, "Courier New", Courier;
+}
+h1::after {
+  content: " →";
+  font-size: 80px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+p > a,
+li > a {
+  color: rgb(0, 0, 0);
+}
+
+/* Navigation styling */
+@keyframes growNavbar {
+  from {
+    transform: scale(0);
+  }
+  to {
+  }
+}
+.mainNav {
+  left: 0;
+  top: 0;
+  font-size: 15px;
+  position: absolute;
+  margin-left: 4rem;
+  margin-top: 8rem;
+}
+.mainNav ul {
+  width: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  display: block;
+}
+.mainNav li {
+  width: 5rem;
+  border: 1px var(--list-border-colour) solid;
+  animation: growNavbar 1s ease-in-out;
+}
+.mainNav a {
+  background-color: var(--nav-background-colour);
+  min-height: 3rem;
+  text-decoration: none;
+  color: var(--hyperlink-colour);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  box-shadow: 5px 5px 0 0 rgb(247, 186, 190);
+  border: 1px #006801 solid;
+}
+.mainNav a[aria-current] {
+  color: var(--nav-background-colour);
+  background-color: var(--hyperlink-colour);
+}
+.mainNav a:hover {
+  color: var(--nav-hover-text);
+  background-color: var(--nav-hover-background);
+  border: 1px var(--nav-background-colour) solid;
+}
+.mainNav li:nth-of-type(2n) {
+  margin-left: 10rem;
+}
+
+/* CSS styling for The Beauty of CSS Design Heading */
+#subHeading {
+  border: solid 5px #31a767;
+  max-width: 20rem;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 30px;
+  margin-bottom: 5rem;
+}
+
+article:first-of-type {
+  background-color: #f8839e;
+  color: #000000;
+  min-width: 10rem;
+  text-align: center;
+  height: auto;
+  margin-left: 0rem;
+  box-shadow: 6px 6px 0 0 rgb(110, 148, 172);
+}
+article:first-of-type h2 {
+  background-color: #f7babe;
+}
+article:nth-of-type(2) {
+  background-color: #6e97b5;
+  color: #000000;
+  min-width: 10rem;
+  text-align: center;
+  height: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  box-shadow: 6px 6px 0 0 rgb(247, 186, 190);
+}
+article:nth-of-type(2) h2 {
+  background-color: #6fb4de;
+}
+
+#f2as {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+#l2as {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+nav{
+  width: auto;
+}
+
+#kittenImg {
+  position: absolute;
+  width: 20rem;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  border: 0.3rem solid #f8839e;
+}
+@media screen and (max-width: 1023px) {
+  h1 {
+    margin-left: 1rem;
+    font-size: 25px;
+  }
+  h1::after {
+    content: " →";
+    font-size: 50px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .mainNav {
+    margin-top: 6rem;
+    margin-left: 2rem;
+  }
+  #f2as {
+    flex-direction: column;
+    margin: 0;
+  }
+  #l2as {
+    margin-right: 0;
+    flex-direction: column;
+  }
+  #subHeading {
+    border: solid 5px #31a767;
+    margin-top: 18rem;
+    margin-bottom: 4rem;
+    max-width: 10rem;
+    margin-left: auto;
+    font-size: 30px;
+  }
+
+  article:nth-of-type(2) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  article {
+    left: 0;
+    margin-bottom: 2rem;
+  }
+
+  #kittenImg{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem; 
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+  }
+}

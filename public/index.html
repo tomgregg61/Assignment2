@@ -1,0 +1,166 @@
+<!-- 
+•	This page should be the first page people get to 
+•	This should advertise you and draw people into the application
+•	Content suggestions:
+•	All about you / interesting facts
+•	Information about your skills / hobbies
+•	Call to action for your qualifications and demos
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A CV website for Web Development Assignment 2"
+    />
+    <meta name="theme-color" content="#0e353e" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#847e87" />
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="msapplication-config" content="icons/browserconfig.xml" />
+    <meta name="theme-color" content="#ff0000" />
+  </head>
+  <body>
+    <div id="container">
+      <header id="mainHeader">
+        <h1>Home</h1>
+      </header>
+      <nav class="mainNav">
+        <ul>
+          <li><a aria-current="page" href="index.html">Home</a></li>
+          <li><a href="qualifications.html">Qualifications</a></li>
+          <li><a href="demos.html">Demos</a></li>
+          <li><a href="interests.html">Interests</a></li>
+        </ul>
+      </nav>
+      <main>
+        <div id="about">
+          <div class="text">
+            <div class="item back"></div>
+            <div class="item front">
+              <h2 id="aboutHeader">About Me</h2>
+              <p>
+                My name is <em>Thomas Gregg</em>, I am currently a student
+                working towards a BSc in Computer Science. I am from Hampshire a
+                county in the South of England.<br /><br />
+                My interest in Computer Science stemmed from my fondness for
+                video games. Out of interest I took GCSE Computer Science, as
+                well as A-Level prior to University. Throughout the two courses
+                i learnt Python(GCSE), C#(GCE), as well as HTML, CSS, and
+                JavaScript(during my NEA).<br /><br />
+                I hope to pursue a career in either Software or Web development.
+              </p>
+            </div>
+          </div>
+          <img
+            id="pfp"
+            src="images/index/thomasGregg.webp"
+            alt="a picture of Thomas Gregg"
+          />
+          <!-- https://www.linkedin.com/in/thomas-gregg-013634262/ -->
+        </div>
+        <div id="skills">
+          <div class="text">
+            <h2 id="skillsHeader">Skills</h2>
+            <ul>
+              <li>Proficient in HTML, CSS, JavaScript</li>
+              <li>
+                Experience with web development frameworks (e.g. Nuxt, Vue.js)
+              </li>
+              <li>Familiarity with programming languages (e.g. Python, C#)</li>
+              <li>Knowledge of version control systems like Git</li>
+              <li>2D Game development using Unity and Pygame</li>
+              <li>Problem-solving and debugging skills</li>
+              <li>
+                Ability to work and create projects collaboratively in teams
+              </li>
+            </ul>
+          </div>
+          <img
+            id="flower"
+            src="images/index/flowerImgRemoved.webp"
+            alt="a picture of a hand drawn flower"
+          />
+          <!-- https://www.pinterest.co.uk/pin/872572496542997357/ -->
+        </div>
+        <div id="hobbies">
+          <div class="text">
+            <h2 id="hobbyHeader">Hobbies</h2>
+            <ul>
+              <li>Gaming (Minecraft, Helldivers, CSGO, RDR2, DOOM)</li>
+              <li>Reading sci-fi/fantasy novels</li>
+              <li>
+                Participating in online communities or forums related to
+                programming and gaming
+              </li>
+              <li>Attending gaming or tech-related events and conferences</li>
+              <li>Watching and rating Movies and Tv-shows</li>
+              <li>Basketball</li>
+              <li>Volleyball</li>
+            </ul>
+          </div>
+          <img
+            src="images/index/rodman.webp"
+            alt="a picture of dennis rodman"
+          />
+          <!-- https://www.inquirer.com/sixers/the-last-dance-dennis-rodman-michael-jordan-las-vegas-20200427.html -->
+        </div>
+      </main>
+      <footer id="footer">
+        <div id="contentOfFooter">
+          Name: Thomas Gregg <br />
+          StudentID: 23017369 <br />
+          <b
+            >This is not a real website and is a submission for Assignment 2 of
+            Staffordshire University's Year 1 Web Development Module</b
+          >
+          <br />
+          <a class="w3" href="https://validator.w3.org/">validator.w3</a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      //check whether browser support service workers
+      if ("serviceWorker" in navigator) {
+        //wait until page loaded to avoid delaying rendering
+        window.addEventListener("load", function () {
+          //register service worker
+          navigator.serviceWorker.register("serviceworker.js").then(
+            function (registration) {
+              console.log(
+                "Service worker registration successful",
+                registration
+              );
+            },
+            function (err) {
+              console.log("Service worker registration failed", err);
+            }
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

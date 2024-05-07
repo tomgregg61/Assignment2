@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Demo Page</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A CV website for Web Development Assignment 2"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cssdemo.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#847e87" />
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="msapplication-config" content="icons/browserconfig.xml" />
+    <meta name="theme-color" content="#ff0000" />
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1>CSS Playground</h1>
+        <nav class="mainNav">
+          <ul>
+            <li id="n1"><a href="index.html">Home</a></li>
+            <li id="n2"><a href="qualifications.html">Qualifications</a></li>
+            <li id="n3"><a href="demos.html">Demos</a></li>
+            <li id="n4"><a href="interests.html">Interests</a></li>
+          </ul>
+        </nav>
+        <h2 id="subHeading">
+          The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design
+        </h2>
+      </header>
+      <img id="kittenImg"
+      src="images/cssDemo/kitten.webp"
+      alt="picture of a kitten wearing a fairy outfit"
+    />
+      <div id="f2as">
+        <article id="box1">
+          <h2 class="top">A bit about this page</h2>
+          <p class="bottom">
+            My name is Thomas Gregg and I am on the first year of my Computer
+            Science degree
+          </p>
+          <p class="bottom">
+            A demonstration of what I can accomplish using vanilla CSS based
+            design. This is part of my second assignment in Web Development and
+            Operating Systems
+          </p>
+        </article>
+        <article>
+          <h2>HTML and CSS</h2>
+          <p>
+            <a href="https://www.w3.org/standards/webdesign/htmlcss"
+              >W3C definition of HTML and CSS</a
+            >
+            is
+          </p>
+          <blockquote cite="https://www.w3.org/standards/webdesign/htmlcss">
+            "HTML (the Hypertext Markup Language) and CSS (Cascading Style
+            Sheets) are two of the core technologies for building Web pages.
+            HTML provides the structure of the page, CSS the (visual and aural)
+            layout, for a variety of devices. Along with graphics and scripting,
+            HTML and CSS are the basis of building Web pages and Web
+            Applications." (W3C(2022))
+          </blockquote>
+        </article>
+      </div>
+      <div id="l2as">
+        <article>
+          <h2>What is CSS</h2>
+          <p>
+            CSS is for the styling of web content, such as colours and layout.
+            It allows the look and feel of the web content to change when on
+            different types of devices with different sized screens, such as
+            computers and mobile phones
+          </p>
+          <p>
+            The separation of HTML from CSS makes it easier for the developer to
+            maintain web applications as you can share style sheets across your
+            pages, and style the pages differently in different situations. This
+            is referred to as the separation of content from presentation.
+          </p>
+          <p>
+            CSS is made up of a number of
+            <a href="https://www.w3.org/Style/CSS/current-work"
+              >different CSS specifications.</a
+            >, which are in these different statuses
+          </p>
+          <ul>
+            <li>FPWD - First Public Working Draft</li>
+            <li>WD - Working Draft</li>
+            <li>CR - Candidate Recommendation</li>
+            <li>CRD - Candidate Recommendation Draft</li>
+            <li>PR - Proposed Recommendation</li>
+            <li>REC - Recommendation</li>
+            <li>SPSD - Superseded Recommendation</li>
+          </ul>
+          <p>
+            <a href="https://www.w3.org/Style/CSS/"
+              >Take a look at the CSS standards on the W3C site</a
+            >
+          </p>
+        </article>
+        <article>
+          <h2>Where did this idea come from?</h2>
+          <p>
+            Inspiration for the content on this page came from
+            <a href="http://daveshea.com/projects/zen/"
+              >Dave Shea CSS Zen Garden</a
+            >and a modern take on this by
+            <a href="https://stylestage.dev/">Stephanie Eckles Style Stage</a>.
+            Do take a look at these to get inspiration on what CSS can do now.
+          </p>
+          <p>Places to look for CSS tips and tricks include the following:</p>
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                >MDN Web Docs CSS Pages</a
+              >
+            </li>
+            <li>
+              <a href="https://web.dev/learn/css/">Web Dev Learn CSS</a>
+            </li>
+            <li><a href="https://moderncss.dev/">Modern CSS Solutions</a></li>
+            <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+          </ul>
+          <p>Some examples of modern CSS include:</p>
+          <ul>
+            <li>Flexbox</li>
+            <li>Grid</li>
+            <li>custom variables</li>
+            <li>@supports()</li>
+            <li>gradients</li>
+            <li>animation</li>
+            <li>3D transforms</li>
+            <li>object-fit</li>
+            <li>calc()</li>
+            <li>position: sticky</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <script>
+      //check whether browser support service workers
+      if ("serviceWorker" in navigator) {
+        //wait until page loaded to avoid delaying rendering
+        window.addEventListener("load", function () {
+          //register service worker
+          navigator.serviceWorker.register("serviceworker.js").then(
+            function (registration) {
+              console.log(
+                "Service worker registration successful",
+                registration
+              );
+            },
+            function (err) {
+              console.log("Service worker registration failed", err);
+            }
+          );
+        });
+      }
+    </script>
+  </body>
+</html>
